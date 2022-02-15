@@ -1,7 +1,21 @@
 // const anchor = document.querySelector('a')!;
 //  console.log(anchor.href);
-// const form = document.querySelector('form')!;
-//classes
+const me = {
+    name: 'steve',
+    age: 33,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
+console.log(me);
+const greetPerson = (person) => {
+    console.log('hello ', person.name);
+};
+greetPerson(me);
 import { Invoice } from './classes/invoice.js';
 const invOne = new Invoice('mario', 'work on mario website', 200);
 const invTwo = new Invoice('luigi', 'work on luigi website', 250);

@@ -4,6 +4,36 @@
 // const form = document.querySelector('form')!;
 
 //classes
+
+//interfaces
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
+const me: IsPerson = {
+    name: 'steve',
+    age: 33,
+    speak(text: string): void {
+        console.log(text);
+
+    },
+    spend(amount: number): number {
+        console.log('I spent', amount);
+        return amount;
+    
+
+    }
+
+
+};
+console.log(me)
+
+const greetPerson = (person: IsPerson)=>{
+    console.log('hello ', person.name)
+};
+greetPerson(me)
 import { Invoice } from './classes/invoice.js'
 
 const invOne = new Invoice('mario', 'work on mario website', 200);
