@@ -4,20 +4,7 @@
 // const form = document.querySelector('form')!;
 
 //classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-    
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ) {}
-    format(){
-        return `${this.client} owes $${this.amount} for ${this.details}`
-    }
-}
+import { Invoice } from './classes/invoice.js'
 
 const invOne = new Invoice('mario', 'work on mario website', 200);
 const invTwo = new Invoice('luigi', 'work on luigi website', 250);
