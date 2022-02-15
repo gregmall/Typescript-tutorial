@@ -72,17 +72,33 @@
 
 // let result = minus(10,7);
 
-type StringOrNum = string | number;
-type objWithName = { name: string, uid: StringOrNum }
+// type StringOrNum = string | number;
+// type objWithName = { name: string, uid: StringOrNum }
 
-const logDetails =(uid: StringOrNum, item: string) =>{
-    console.log(`${item} has a uid of ${uid}`)
+// const logDetails =(uid: StringOrNum, item: string) =>{
+//     console.log(`${item} has a uid of ${uid}`)
+// }
+
+// const greetAgain = (user: objWithName) => {
+//     console.log(`${user.name} says hello`);
+// }
+
+let greet: (a: string, b: string) => void;
+greet = (name:string, greeting: string)=>{
+    console.log(`${name} says ${greeting}`);
 }
 
-const greetAgain = (user: objWithName) => {
-    console.log(`${user.name} says hello`);
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) =>{
+    return numOne + numTwo
 }
 
+let logDetails: (obj: {name: string, age: number}) => void;
 
+type person = {name: string, age: number}
+logDetails = (ninja: person) =>{
+    console.log(`${ninja.name} is ${ninja.age} old`);
 
+}
 
