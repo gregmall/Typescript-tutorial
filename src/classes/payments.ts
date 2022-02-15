@@ -1,16 +1,16 @@
 import { HasFormatted } from '../interfaces/hasFormatted'
 
-export class Invoice implements HasFormatted{
-    // readonly client: string;
+export class Payment implements HasFormatted{
+    // readonly recipient: string;
     // private details: string;
     // public amount: number;
     
     constructor(
-        readonly client: string,
+        readonly recipient: string,
         private details: string,
         public amount: number
     ) {}
     format(){
-        return `${this.client} owes $${this.amount} for ${this.details}`
+        return `${this.recipient} is owed $${this.amount} for ${this.details}`
     }
 }
